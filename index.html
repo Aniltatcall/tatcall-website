@@ -167,15 +167,6 @@
     <section class="hero">
         <h1><img src="logo2_playstore_remove.png" alt="TatCall Logo" style="height: 60px; vertical-align: middle; margin-right: 10px;">TatCall</h1>
         <p>Let them know WHY you're calling before they answer</p>
-        
-        <div class="download-buttons">
-            <a href="https://play.google.com/store" class="btn btn-playstore">
-                📱 Download on Play Store
-            </a>
-            <a class="btn btn-appstore">
-                🍎 App Store (Coming Soon)
-            </a>
-        </div>
     </section>
 
     <!-- Features -->
@@ -451,6 +442,33 @@ document.getElementById('resetBtn').addEventListener('click', () => {
     document.getElementById('setupScreen').classList.add('active');
 });
 </script>
+    
+
+<!-- NEW: Download Section -->
+<section style="background: linear-gradient(135deg, #2C3E50 0%, #34495E 100%); padding: 60px 20px; text-align: center;">
+    <h2 style="color: white; font-size: 32px; margin-bottom: 15px;">
+        Ready to Try TatCall?
+    </h2>
+    <p style="color: rgba(255,255,255,0.9); font-size: 18px; margin-bottom: 40px;">
+        Download now and start calling with context!
+    </p>
+    
+    <div class="download-buttons" id="downloadButtons">
+        <a href="https://play.google.com/store" class="btn btn-playstore" id="playstoreBtn">
+            📱 Download on Google Play
+        </a>
+        <a class="btn btn-appstore">
+            🍎 App Store (Coming Soon)
+        </a>
+    </div>
+    
+    <!-- Desktop message (hidden by default) -->
+    <div id="desktopMessage" style="display: none; margin-top: 30px; padding: 20px; background: rgba(255,255,255,0.1); border-radius: 12px; max-width: 500px; margin-left: auto; margin-right: auto;">
+        <p style="color: white; font-size: 16px; margin: 0;">
+            💻 Open this link on your phone to download TatCall from Play Store!
+        </p>
+    </div>
+</section>
 
     <!-- Footer -->
     <footer>
@@ -461,8 +479,35 @@ document.getElementById('resetBtn').addEventListener('click', () => {
             <a href="https://instagram.com/tatcall" target="_blank">📷 Instagram</a>
         </div>
     </footer>
+<script>
+    
+// Mobile detection
+function isMobile() {
+    return /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+}
+
+// Handle Play Store button click
+document.getElementById('playstoreBtn').addEventListener('click', function(e) {
+    if (!isMobile()) {
+        e.preventDefault();  // Stop navigation on desktop
+        document.getElementById('desktopMessage').style.display = 'block';
+        
+        // Hide message after 5 seconds
+        setTimeout(() => {
+            document.getElementById('desktopMessage').style.display = 'none';
+        }, 5000);
+    }
+    // On mobile, link works normally
+});
+
+// Show QR code alternative (optional enhancement)
+if (!isMobile()) {
+    // Could show QR code here in future
+}
+</script>
 </body>
 </html>
+
 
 
 
