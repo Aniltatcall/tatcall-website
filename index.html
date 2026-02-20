@@ -293,22 +293,37 @@
 
 <style>
 .demo-container {
-    max-width: 400px;
+    max-width: 380px;
     margin: 0 auto;
 }
 
 .demo-phone {
     background: white;
-    border: 3px solid #2C3E50;
-    border-radius: 30px;
+    border: 8px solid #2C3E50;
+    border-radius: 35px;
     overflow: hidden;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
     position: relative;
+}
+
+/* Add phone notch at top */
+.demo-phone::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 25px;
+    background: #2C3E50;
+    border-radius: 0 0 15px 15px;
+    z-index: 10;
 }
 
 .demo-screen {
     display: none;
-    min-height: 500px;
+    min-height: 600px;
+    padding-top: 30px;  /* Space for notch */
 }
 
 .demo-screen.active {
@@ -513,6 +528,7 @@ if (!isMobile()) {
 </script>
 </body>
 </html>
+
 
 
 
