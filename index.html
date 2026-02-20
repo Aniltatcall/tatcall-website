@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TatCall - Call With Context</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            color: #2C3E50;
+            line-height: 1.6;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #2C3E50 0%, #34495E 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+        
+        .download-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            padding: 15px 30px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.2s;
+        }
+        
+        .btn:hover { transform: translateY(-2px); }
+        
+        .btn-playstore {
+            background: #0F9B8E;
+            color: white;
+        }
+        
+        .btn-appstore {
+            background: #666;
+            color: white;
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        
+        /* Features */
+        .features {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .features h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 60px;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+        
+        .feature {
+            text-align: center;
+            padding: 30px;
+        }
+        
+        .feature-icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        
+        .feature h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+        
+        /* How It Works */
+        .how-it-works {
+            background: #F8F9FF;
+            padding: 80px 20px;
+        }
+        
+        .how-it-works h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 60px;
+        }
+        
+        .steps {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .step {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 40px;
+            align-items: start;
+        }
+        
+        .step-number {
+            background: #0F9B8E;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+        
+        /* Footer */
+        footer {
+            background: #2C3E50;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        
+        .social-links {
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            color: white;
+            margin: 0 15px;
+            font-size: 24px;
+            text-decoration: none;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 32px; }
+            .hero p { font-size: 18px; }
+            .step { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>📞 TatCall</h1>
+        <p>Let them know WHY you're calling before they answer</p>
+        
+        <div class="download-buttons">
+            <a href="https://play.google.com/store" class="btn btn-playstore">
+                📱 Download on Google Play
+            </a>
+            <a class="btn btn-appstore">
+                🍎 App Store (Coming Soon)
+            </a>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features">
+        <h2>Why TatCall?</h2>
+        
+        <div class="feature-grid">
+            <div class="feature">
+                <div class="feature-icon">💬</div>
+                <h3>Call With Context</h3>
+                <p>Tell them why you're calling before they pick up. No more mystery calls!</p>
+            </div>
+            
+            <div class="feature">
+                <div class="feature-icon">⏰</div>
+                <h3>Respect Their Time</h3>
+                <p>Mark calls as urgent or casual. They decide if now is a good time.</p>
+            </div>
+            
+            <div class="feature">
+                <div class="feature-icon">🚨</div>
+                <h3>Emergency Contacts</h3>
+                <p>Save important contacts for instant access when you need them most.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works">
+        <h2>How It Works</h2>
+        
+        <div class="steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <div>
+                    <h3>Choose Your Feeling</h3>
+                    <p>Select if your call is normal, urgent, or a long chat.</p>
+                </div>
+            </div>
+            
+            <div class="step">
+                <div class="step-number">2</div>
+                <div>
+                    <h3>Add Context (Optional)</h3>
+                    <p>Tell them what it's about: "Need project update" or "Just catching up"</p>
+                </div>
+            </div>
+            
+            <div class="step">
+                <div class="step-number">3</div>
+                <div>
+                    <h3>They See Everything</h3>
+                    <p>Before answering, they know who's calling, why, and if it's urgent.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 TatCall. All rights reserved.</p>
+        <p>Contact: <a href="mailto:tatcall.info@gmail.com" style="color: #0F9B8E;">tatcall.info@gmail.com</a></p>
+        
+        <div class="social-links">
+            <a href="https://instagram.com/tatcall" target="_blank">📷 Instagram</a>
+        </div>
+    </footer>
+</body>
+</html>
+```
+
+**4. Connect Custom Domain:**
+
+In your domain registrar (where you bought tatcall.com), add these DNS records:
+```
+Type: A
+Name: @
+Value: 185.199.108.153
+
+Type: A
+Name: @
+Value: 185.199.109.153
+
+Type: A  
+Name: @
+Value: 185.199.110.153
+
+Type: A
+Name: @
+Value: 185.199.111.153
+
+Type: CNAME
+Name: www
+Value: yourusername.github.io
