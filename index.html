@@ -495,7 +495,9 @@ document.getElementById('resetBtn').addEventListener('click', () => {
 <!-- Privacy Policy Section -->
 <section style="padding: 60px 20px; background: white;">
     <div style="max-width: 800px; margin: 0 auto; text-align: center;">
-        <button id="privacyBtn" style="
+        <a href="privacy.html" style="
+            display: inline-block;
+            text-decoration: none;
             background: linear-gradient(135deg, #0F9B8E 0%, #0d7a6f 100%);
             color: white;
             border: none;
@@ -508,132 +510,9 @@ document.getElementById('resetBtn').addEventListener('click', () => {
             font-weight: 600;
         ">
             📄 Privacy Policy
-        </button>
+        </a>
     </div>
 </section>
-
-<!-- Privacy Policy Modal (Pop-up) -->
-<div id="privacyModal" style="
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    z-index: 9999;
-    overflow-y: auto;
-">
-    <div style="
-        max-width: 800px;
-        margin: 50px auto;
-        background: white;
-        border-radius: 20px;
-        padding: 40px;
-        position: relative;
-    ">
-        <!-- Close Button -->
-        <button id="closeModal" style="
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            background: #FF4444;
-            color: white;
-            border: none;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            font-size: 24px;
-            cursor: pointer;
-            line-height: 1;
-        ">×</button>
-
-        <!-- Privacy Policy Content -->
-        <h2 style="color: #0F9B8E; margin-bottom: 20px;">TatCall Privacy Policy</h2>
-        <p style="color: #666; margin-bottom: 30px;"><strong>Last Updated:</strong> March 2026</p>
-
-        <div style="text-align: left; line-height: 1.8; color: #333;">
-            <h3 style="color: #0F9B8E; margin-top: 30px;">1. Information We Collect</h3>
-            <ul>
-                <li>Phone contacts (stored locally only)</li>
-                <li>Phone number for registration</li>
-                <li>Call metadata (duration, time)</li>
-            </ul>
-
-            <h3 style="color: #0F9B8E; margin-top: 30px;">2. How We Use Information</h3>
-            <ul>
-                <li>To facilitate voice calls between users</li>
-                <li>To display contact names during calls</li>
-                <li>All data is stored on your device and Firebase</li>
-            </ul>
-
-            <h3 style="color: #0F9B8E; margin-top: 30px;">3. Data Sharing</h3>
-            <ul>
-                <li>We do NOT sell your data</li>
-                <li>We do NOT share with third parties</li>
-                <li>Calls are peer-to-peer encrypted</li>
-            </ul>
-
-            <h3 style="color: #0F9B8E; margin-top: 30px;">4. Permissions Used</h3>
-            <ul>
-                <li><strong>RECORD_AUDIO:</strong> For voice calls</li>
-                <li><strong>READ_CONTACTS:</strong> To show your contacts</li>
-                <li><strong>CALL_PHONE:</strong> For emergency calls</li>
-                <li><strong>INTERNET:</strong> For call signaling</li>
-                <li><strong>CAMERA:</strong> For future video calling (not yet implemented)</li>
-            </ul>
-
-            <h3 style="color: #0F9B8E; margin-top: 30px;">5. Data Security</h3>
-            <p>We use industry-standard encryption to protect your data. All calls use WebRTC encryption.</p>
-
-            <h3 style="color: #0F9B8E; margin-top: 30px;">6. Your Rights</h3>
-            <ul>
-                <li>You can delete your account anytime</li>
-                <li>You can request data deletion</li>
-                <li>You control your contact permissions</li>
-            </ul>
-
-            <h3 style="color: #0F9B8E; margin-top: 30px;">7. Contact Us</h3>
-            <p>For privacy concerns, email: <strong>tatcall.info@gmail.com</strong></p>
-
-            <h3 style="color: #0F9B8E; margin-top: 30px;">8. Changes to This Policy</h3>
-            <p>We may update this policy. Check this page regularly for updates.</p>
-        </div>
-    </div>
-</div>
-
-<script>
-// Open modal
-document.getElementById('privacyBtn').addEventListener('click', function() {
-    document.getElementById('privacyModal').style.display = 'block';
-    document.body.style.overflow = 'hidden'; // Prevent background scroll
-});
-
-// Close modal
-document.getElementById('closeModal').addEventListener('click', function() {
-    document.getElementById('privacyModal').style.display = 'none';
-    document.body.style.overflow = 'auto'; // Restore scroll
-});
-
-// Close when clicking outside
-document.getElementById('privacyModal').addEventListener('click', function(e) {
-    if (e.target === this) {
-        this.style.display = 'none';
-        document.body.style.overflow = 'auto';
-    }
-});
-
-// Button hover effect
-document.getElementById('privacyBtn').addEventListener('mouseenter', function() {
-    this.style.transform = 'translateY(-2px)';
-    this.style.boxShadow = '0 6px 20px rgba(15, 155, 142, 0.4)';
-});
-
-document.getElementById('privacyBtn').addEventListener('mouseleave', function() {
-    this.style.transform = 'translateY(0)';
-    this.style.boxShadow = '0 4px 15px rgba(15, 155, 142, 0.3)';
-});
-</script>
 
     <!-- Footer -->
     <footer>
@@ -672,6 +551,7 @@ if (!isMobile()) {
 </script>
 </body>
 </html>
+
 
 
 
