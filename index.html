@@ -6,11 +6,47 @@
     <title>TatCall - Call With Context</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            color: #2C3E50;
-            line-height: 1.6;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #0F9B8E 0%, #2C3E50 100%);
+            color: #FFFFFF;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        /* ADD THIS NEW STYLE FOR LOGO */
+        .logo-container {
+            display: inline-block;
+            background: white;
+            border-radius: 50%;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+        }
+
+        .logo {
+            width: 120px;
+            height: 120px;
+            display: block;
+        }
+
+        h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .tagline {
+            font-size: 24px;
+            margin-bottom: 40px;
+            opacity: 0.9;
         }
         
         /* Hero Section */
@@ -163,12 +199,14 @@
     </style>
 </head>
 <body>
-    <!-- Hero Section -->
-    <section class="hero">
-        <h1><img src="logo2_playstore_remove.png" alt="TatCall Logo" style="height: 60px; vertical-align: middle; margin-right: 10px;"></h1>
+    <div class="container">
+        <!-- UPDATED LOGO WITH WHITE CIRCLE -->
+        <div class="logo-container">
+            <img src="logo.png" alt="TatCall Logo" class="logo">
+        </div>
+
         <h1>TatCall</h1>
-        <p>Let them know WHY you're calling before they answer</p>
-    </section>
+        <p class="tagline">Call with Context - Let them know WHY before they answer</p>
 
     <!-- Features -->
     <section class="features">
@@ -558,6 +596,7 @@ if (!isMobile()) {
     // Could show QR code here in future
 }
 </script>
+      </div>  
 </body>
 </html>
 
