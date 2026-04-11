@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="canonical" href="https://tatcall.com/">
     <link rel="icon" type="image/png" href="logo2_playstore_remove.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -685,7 +686,7 @@ document.getElementById('resetBtn').addEventListener('click', () => {
     </p>
     
     <div class="download-buttons" id="downloadButtons">
-        <a href="https://play.google.com/store" class="btn btn-playstore" id="playstoreBtn">
+        <a href="#" class="btn btn-playstore" id="playstoreBtn">
             📱 Download on Google Play
         </a>
         <a class="btn btn-appstore">
@@ -695,9 +696,11 @@ document.getElementById('resetBtn').addEventListener('click', () => {
     
     <!-- Desktop message (hidden by default) -->
     <div id="desktopMessage" style="display: none; margin-top: 30px; padding: 20px; background: rgba(255,255,255,0.1); border-radius: 12px; max-width: 500px; margin-left: auto; margin-right: auto;">
-        <p style="color: white; font-size: 16px; margin: 0;">
-            💻 You're on a computer! Scan this QR code with your phone:
-    </p>
+        <p style="color: white; font-size: 16px;">
+            📱 This app works best on mobile  
+            <br><br>
+            👉 Scan the QR code to download on your phone
+        </p>
     <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://play.google.com/store/apps/details?id=YOUR_APP_ID" 
          alt="QR Code" 
          style="margin-top: 15px; border-radius: 8px;">
@@ -743,31 +746,34 @@ document.getElementById('resetBtn').addEventListener('click', () => {
         -- Please follow for latest updates --
     </p>
     </footer>
-<script>
-    
-// Mobile detection
-function isMobile() {
-    return /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-}
 
-// Handle Play Store button click
-document.getElementById('playstoreBtn').addEventListener('click', function(e) {
-    if (!isMobile()) {
-        e.preventDefault();  // Stop navigation on desktop
-        document.getElementById('desktopMessage').style.display = 'block';
-        
-        // Hide message after 5 seconds
-        setTimeout(() => {
-            document.getElementById('desktopMessage').style.display = 'none';
-        }, 7000);
+    <script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    function isMobile() {
+        return /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
     }
-    // On mobile, link works normally
-});
 
-// Show QR code alternative (optional enhancement)
-if (!isMobile()) {
-    // Could show QR code here in future
-}
+    const playBtn = document.getElementById('playstoreBtn');
+
+    playBtn.addEventListener('click', function(e) {
+        e.preventDefault(); // STOP default always
+
+        if (isMobile()) {
+            // ✅ Mobile → redirect to Play Store
+            window.location.href = "https://play.google.com/store/apps/details?id=com.yourapp";
+        } else {
+            // 💻 Desktop → show QR message
+            const msg = document.getElementById('desktopMessage');
+            msg.style.display = 'block';
+
+            setTimeout(() => {
+                msg.style.display = 'none';
+            }, 7000);
+        }
+    });
+
+});
 </script>  
 </body>
 </html>
