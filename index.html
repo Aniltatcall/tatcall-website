@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="icon" type="image/png" href="logo2_playstore_remove.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TatCall - Call With Context</title>
@@ -20,11 +19,10 @@
         box-shadow: 0 10px 30px rgba(0,0,0,0.25);
     }
 
-        .logo {
-            max-width: 80%;
-            max-height: 80%;
-            object-fit: contain;
-        }
+    .logo {
+        width: 120px;
+        height: 120px;
+    }
 
          body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -34,108 +32,35 @@
         }
         
         /* Hero Section */
-       .hero {
-    position: relative;
-    overflow: hidden;
-}
+        .hero {
+            background: linear-gradient(135deg, #2C3E50 0%, #34495E 100%);
+            color: white;
+            padding: 120px 20px 100px;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 40px;
+            opacity: 0.9;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
 
-.hero::after {
-    content: '';
-    position: absolute;
-    width: 300px;
-    height: 300px;
-    background: rgba(255,255,255,0.05);
-    border-radius: 50%;
-    top: -50px;
-    right: -50px;
-}
+        .hero h1, .hero p, .logo-container {
+            animation: fadeUp 1s ease forwards;
+            opacity: 0;
+        }
 
-.hero-content {
-    z-index: 2;
-    max-width: 700px;
-    padding: 20px;
-}
-
-.logo-container {
-    width: 110px;
-    height: 110px;
-    margin: 0 auto 20px;
-    background: white;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.logo {
-    width: 80px;
-}
-
-.brand-title {
-    font-size: 48px;
-    font-weight: 700;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-.hero h1 {
-    font-size: 52px;
-    font-weight: 800;
-    margin-bottom: 15px;
-    letter-spacing: -1px;
-}
-
-.tagline {
-    font-size: 20px;
-    opacity: 0.9;
-    margin-bottom: 10px;
-}
-
-.subtext {
-    font-size: 16px;
-    opacity: 0.7;
-    margin-bottom: 30px;
-}
-
-/* CTA */
-.cta-group {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-}
-
-.btn-primary {
-    background: linear-gradient(135deg, #00C9A7, #00A8CC);
-    padding: 16px 36px;
-    border-radius: 40px;
-    color: white;
-    font-weight: bold;
-    text-decoration: none;
-    box-shadow: 0 10px 30px rgba(0, 200, 167, 0.4);
-    transition: all 0.3s ease;
-}
-
-.btn-primary:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 20px 50px rgba(0, 200, 167, 0.6);
-}
-
-.cta-note {
-    font-size: 13px;
-    opacity: 0.7;
-}
-
-/* Background glow */
-.hero-bg {
-    position: absolute;
-    width: 600px;
-    height: 600px;
-    background: radial-gradient(circle, rgba(0,200,167,0.3), transparent 70%);
-    top: -100px;
-    right: -100px;
-    filter: blur(80px);
-}
+        .hero p { animation-delay: 0.3s; }
+        .logo-container { animation-delay: 0.6s; }
 
         @keyframes fadeUp {
             from {
@@ -205,11 +130,12 @@
         }
         
         .feature {
-            background: white;
+            text-align: center;
             padding: 30px;
-            border-radius: 20px;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
-            transition: all 0.3s ease;
+            border-radius: 16px;
+            background: white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
         }
         
         .feature-icon {
@@ -223,8 +149,8 @@
         }
 
         .feature:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 25px 60px rgba(0,0,0,0.15);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.15);
         }
 
         /* How It Works */
@@ -303,24 +229,6 @@
             height: 60px;
             background: linear-gradient(to bottom, #ffffff, #f5f7fa);
         }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        .hero-subtext {
-            font-size: 16px;
-            opacity: 0.85;
-            letter-spacing: 0.5px;
-        }
-
-        .hero-subtext span {
-            display: block;
-            font-size: 20px;
-            font-weight: 600;
-            margin-top: 8px;
-            color: #0F9B8E;
-        }
         
     </style>
 </head>
@@ -328,48 +236,13 @@
 <body>
     <!-- Hero Section -->
     <section class="hero">
-    <div class="hero-content">
-
         <div class="logo-container">
-            <img src="logo2_playstore_remove.png" class="logo">
+    <img src="logo2_playstore_remove.png" alt="TatCall Logo" class="logo">
         </div>
-        <h1 class="brand-title">TatCall</h1>
+        <h1>TatCall</h1>
+        <p>Let them know WHY you're calling before they answer</p>
+    </section>
 
-        <h1>
-            Calls that explain themselves
-        </h1>
-
-        <p class="tagline">
-            Let them know <strong>WHY</strong> you're calling before they answer
-        </p>
-
-        <p class="hero-subtext">
-            No more ignored calls. No more confusion.<br>
-            <span>Just clear communication.</span>
-        </p>
-
-        <div class="cta-group">
-            <a href="#" class="btn btn-primary" id="playstoreBtn">
-                📱 Try TatCall (Android)
-            </a>
-            <span class="cta-note">Currently in testing • Coming soon</span>
-        </div>
-
-    </div>
-
-    <!-- Floating gradient background -->
-    <div class="hero-bg"></div>
-</section>
-
-<section style="text-align:center; padding:60px 20px; background:#f5f7fa;">
-    <h2 style="font-size:28px; margin-bottom:15px;">
-        How much does an incoming call tell you?
-    </h2>
-    <p style="font-size:18px; color:#666;">
-        Not more than who is calling.
-    </p>
-</section>
-    
     <div class="section-divider"></div>
     
     <!-- Features -->
@@ -695,7 +568,7 @@ document.getElementById('resetBtn').addEventListener('click', () => {
         <p style="color: white; font-size: 16px; margin: 0;">
             💻 You're on a computer! Scan this QR code with your phone:
     </p>
-    <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://play.google.com/store/apps/details?id=com.yourapp" 
+    <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://play.google.com/store/apps/details?id=YOUR_APP_ID" 
          alt="QR Code" 
          style="margin-top: 15px; border-radius: 8px;">
     <p style="color: rgba(255,255,255,0.7); font-size: 14px; margin-top: 10px;">
@@ -735,7 +608,7 @@ document.getElementById('resetBtn').addEventListener('click', () => {
         <p>&copy; 2026 TatCall. All rights reserved.</p>
         <p>Contact: <a href="mailto:tatcall.info@gmail.com" style="color: #0F9B8E;">tatcall.info@gmail.com</a></p>
 
-        <br>
+        -
         
         <div class="social-links">
             <a href="https://www.instagram.com/tatcall.app?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">📷 Instagram</a>
@@ -752,27 +625,17 @@ function isMobile() {
 }
 
 // Handle Play Store button click
-document.addEventListener("DOMContentLoaded", function () {
-
-    function isMobile() {
-        return /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+document.getElementById('playstoreBtn').addEventListener('click', function(e) {
+    if (!isMobile()) {
+        e.preventDefault();  // Stop navigation on desktop
+        document.getElementById('desktopMessage').style.display = 'block';
+        
+        // Hide message after 5 seconds
+        setTimeout(() => {
+            document.getElementById('desktopMessage').style.display = 'none';
+        }, 7000);
     }
-
-    const playBtn = document.getElementById('playstoreBtn');
-
-    playBtn.addEventListener('click', function(e) {
-        if (!isMobile()) {
-            e.preventDefault();
-
-            const msg = document.getElementById('desktopMessage');
-            msg.style.display = 'block';
-
-            setTimeout(() => {
-                msg.style.display = 'none';
-            }, 7000);
-        }
-    });
-
+    // On mobile, link works normally
 });
 
 // Show QR code alternative (optional enhancement)
@@ -782,21 +645,5 @@ if (!isMobile()) {
 </script>  
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
