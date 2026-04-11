@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="icon" type="image/png" href="logo2_playstore_remove.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TatCall - Call With Context</title>
@@ -19,10 +20,11 @@
         box-shadow: 0 10px 30px rgba(0,0,0,0.25);
     }
 
-    .logo {
-        width: 120px;
-        height: 120px;
-    }
+        .logo {
+            max-width: 80%;
+            max-height: 80%;
+            object-fit: contain;
+        }
 
          body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -34,14 +36,18 @@
         /* Hero Section */
        .hero {
     position: relative;
-    height: 100vh;
-    background: radial-gradient(circle at top, #34495E, #1a252f);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
     overflow: hidden;
-    color: white;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 50%;
+    top: -50px;
+    right: -50px;
 }
 
 .hero-content {
@@ -63,6 +69,13 @@
 
 .logo {
     width: 80px;
+}
+
+.brand-title {
+    font-size: 48px;
+    font-weight: 700;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .hero h1 {
@@ -294,6 +307,20 @@
         html {
             scroll-behavior: smooth;
         }
+
+        .hero-subtext {
+            font-size: 16px;
+            opacity: 0.85;
+            letter-spacing: 0.5px;
+        }
+
+        .hero-subtext span {
+            display: block;
+            font-size: 20px;
+            font-weight: 600;
+            margin-top: 8px;
+            color: #0F9B8E;
+        }
         
     </style>
 </head>
@@ -306,6 +333,7 @@
         <div class="logo-container">
             <img src="logo2_playstore_remove.png" class="logo">
         </div>
+        <h1 class="brand-title">TatCall</h1>
 
         <h1>
             Calls that explain themselves
@@ -315,8 +343,9 @@
             Let them know <strong>WHY</strong> you're calling before they answer
         </p>
 
-        <p class="subtext">
-            No more ignored calls. No more confusion. Just clear communication.
+        <p class="hero-subtext">
+            No more ignored calls. No more confusion.<br>
+            <span>Just clear communication.</span>
         </p>
 
         <div class="cta-group">
@@ -666,7 +695,7 @@ document.getElementById('resetBtn').addEventListener('click', () => {
         <p style="color: white; font-size: 16px; margin: 0;">
             💻 You're on a computer! Scan this QR code with your phone:
     </p>
-    <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://play.google.com/store/apps/details?id=YOUR_APP_ID" 
+    <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://play.google.com/store/apps/details?id=com.yourapp" 
          alt="QR Code" 
          style="margin-top: 15px; border-radius: 8px;">
     <p style="color: rgba(255,255,255,0.7); font-size: 14px; margin-top: 10px;">
@@ -706,7 +735,7 @@ document.getElementById('resetBtn').addEventListener('click', () => {
         <p>&copy; 2026 TatCall. All rights reserved.</p>
         <p>Contact: <a href="mailto:tatcall.info@gmail.com" style="color: #0F9B8E;">tatcall.info@gmail.com</a></p>
 
-        -
+        <br>
         
         <div class="social-links">
             <a href="https://www.instagram.com/tatcall.app?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">📷 Instagram</a>
@@ -723,17 +752,27 @@ function isMobile() {
 }
 
 // Handle Play Store button click
-document.getElementById('playstoreBtn').addEventListener('click', function(e) {
-    if (!isMobile()) {
-        e.preventDefault();  // Stop navigation on desktop
-        document.getElementById('desktopMessage').style.display = 'block';
-        
-        // Hide message after 5 seconds
-        setTimeout(() => {
-            document.getElementById('desktopMessage').style.display = 'none';
-        }, 7000);
+document.addEventListener("DOMContentLoaded", function () {
+
+    function isMobile() {
+        return /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
     }
-    // On mobile, link works normally
+
+    const playBtn = document.getElementById('playstoreBtn');
+
+    playBtn.addEventListener('click', function(e) {
+        if (!isMobile()) {
+            e.preventDefault();
+
+            const msg = document.getElementById('desktopMessage');
+            msg.style.display = 'block';
+
+            setTimeout(() => {
+                msg.style.display = 'none';
+            }, 7000);
+        }
+    });
+
 });
 
 // Show QR code alternative (optional enhancement)
