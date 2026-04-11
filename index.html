@@ -734,7 +734,7 @@ document.getElementById('resetBtn').addEventListener('click', () => {
         <p>&copy; 2026 TatCall. All rights reserved.</p>
         <p>Contact: <a href="mailto:tatcall.info@gmail.com" style="color: #0F9B8E;">tatcall.info@gmail.com</a></p>
 
-        -
+        <br>
         
         <div class="social-links">
             <a href="https://www.instagram.com/tatcall.app?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">📷 Instagram</a>
@@ -751,27 +751,17 @@ function isMobile() {
 }
 
 // Handle Play Store button click
-document.addEventListener("DOMContentLoaded", function () {
-
-    function isMobile() {
-        return /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+document.getElementById('playstoreBtn').addEventListener('click', function(e) {
+    if (!isMobile()) {
+        e.preventDefault();  // Stop navigation on desktop
+        document.getElementById('desktopMessage').style.display = 'block';
+        
+        // Hide message after 5 seconds
+        setTimeout(() => {
+            document.getElementById('desktopMessage').style.display = 'none';
+        }, 7000);
     }
-
-    const playBtn = document.getElementById('playstoreBtn');
-
-    playBtn.addEventListener('click', function(e) {
-        if (!isMobile()) {
-            e.preventDefault();
-
-            const msg = document.getElementById('desktopMessage');
-            msg.style.display = 'block';
-
-            setTimeout(() => {
-                msg.style.display = 'none';
-            }, 7000);
-        }
-    });
-
+    // On mobile, link works normally
 });
 
 // Show QR code alternative (optional enhancement)
