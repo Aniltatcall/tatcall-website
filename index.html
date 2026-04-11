@@ -351,7 +351,7 @@
         </p>
         <br>
         <div class="cta-group">
-            <a href="#" class="btn btn-primary" id="playstoreBtn">
+            <a href="javascript:void(0)" id="tryBtn">
                 📱 Try TatCall (Android)
             </a>
             <span class="cta-note">Currently in testing • Coming soon</span>
@@ -686,7 +686,7 @@ document.getElementById('resetBtn').addEventListener('click', () => {
     </p>
     
     <div class="download-buttons" id="downloadButtons">
-        <a href="#" class="btn btn-playstore" id="playstoreBtn">
+        <a href="javascript:void(0)" class="btn btn-playstore" id="playstoreBtn">
             📱 Download on Google Play
         </a>
         <a class="btn btn-appstore">
@@ -747,7 +747,7 @@ document.getElementById('resetBtn').addEventListener('click', () => {
     </p>
     </footer>
 
-    <script>
+   <script>
 document.addEventListener("DOMContentLoaded", function () {
 
     function isMobile() {
@@ -757,19 +757,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const playBtn = document.getElementById('playstoreBtn');
 
     playBtn.addEventListener('click', function(e) {
-        e.preventDefault(); // STOP default always
+        e.preventDefault();
 
         if (isMobile()) {
-            // ✅ Mobile → redirect to Play Store
-            window.location.href = "https://play.google.com/store/apps/details?id=com.yourapp";
+            alert("🚀 TatCall is currently in testing phase.\nAvailable soon on Play Store!");
         } else {
-            // 💻 Desktop → show QR message
             const msg = document.getElementById('desktopMessage');
             msg.style.display = 'block';
-
-            setTimeout(() => {
-                msg.style.display = 'none';
-            }, 7000);
         }
     });
 
