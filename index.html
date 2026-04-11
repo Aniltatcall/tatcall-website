@@ -351,7 +351,7 @@
         </p>
         <br>
         <div class="cta-group">
-            <a href="javascript:void(0)" id="tryBtn">
+            <a href="#" class="btn btn-primary" id="playstoreBtn">
                 📱 Try TatCall (Android)
             </a>
             <span class="cta-note">Currently in testing • Coming soon</span>
@@ -697,9 +697,7 @@ document.getElementById('resetBtn').addEventListener('click', () => {
     <!-- Desktop message (hidden by default) -->
     <div id="desktopMessage" style="display: none; margin-top: 30px; padding: 20px; background: rgba(255,255,255,0.1); border-radius: 12px; max-width: 500px; margin-left: auto; margin-right: auto;">
         <p style="color: white; font-size: 16px;">
-            📱 This app works best on mobile  
-            <br><br>
-            👉 Scan the QR code to download on your phone
+            💻 You're on a computer! Scan this QR code with your phone: 
         </p>
     <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://play.google.com/store/apps/details?id=YOUR_APP_ID" 
          alt="QR Code" 
@@ -758,6 +756,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     playBtn.addEventListener('click', function(e) {
         e.preventDefault();
+
+        // Hide message after 7 seconds
+        setTimeout(() => {
+            document.getElementById('desktopMessage').style.display = 'none';
+        }, 7000);
 
         if (isMobile()) {
             alert("🚀 TatCall is currently in testing phase.\nAvailable soon on Play Store!");
