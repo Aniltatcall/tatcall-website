@@ -204,6 +204,11 @@
     border-radius: 20px;
     box-shadow: 0 15px 40px rgba(0,0,0,0.08);
     transition: all 0.3s ease;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .feature:hover {
@@ -213,7 +218,7 @@
         
         .feature-icon {
             font-size: 48px;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
         
         .feature h3 {
@@ -331,7 +336,40 @@
     #downloadSection {
     scroll-margin-top: 50px;
 }
-        
+
+    .story-section {
+    padding: 80px 20px;
+    background: #f5f7fa;
+    text-align: center;
+}
+
+.story-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.story-image {
+    width: 280px;
+    max-width: 90%;
+    margin-bottom: 30px;
+    transform: rotate(-8deg);
+    filter: drop-shadow(0 20px 40px rgba(0,0,0,0.2));
+}
+
+.story-section h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.story-subtext {
+    font-size: 18px;
+    color: #666;
+}   
+
+    .story-image:hover {
+    transform: rotate(0deg) scale(1.05);
+    transition: all 0.4s ease;
+}
     </style>
 </head>
     
@@ -367,13 +405,16 @@
     <div class="hero-bg"></div>
 </section>
 
-<section style="text-align:center; padding:60px 20px; background:#f5f7fa;">
-    <h2 style="font-size:28px; margin-bottom:15px;">
-        How much does an incoming call tell you?
-    </h2>
-    <p style="font-size:18px; color:#666;">
-        Not more than who is calling.
-    </p>
+<section class="story-section">  
+    <div class="story-content">
+        <img src="phone-image.png" alt="Incoming Call" class="story-image">
+        <h2>
+            How much does an incoming call tell you?
+        </h2>
+        <p class="story-subtext">
+            Not more than who is calling.
+        </p>
+    </div>
 </section>
     
     <div class="section-divider"></div>
@@ -406,7 +447,7 @@
 
     <section style="text-align:center; padding:60px 20px; background:#f5f7fa;">
     <p class="hero-subtext">
-    No more ignored calls. No more confusion.<br>
+    "No more ignored calls. No more confusion."<br>
     <span>Just clear communication.</span>
 </p>
 </section>
