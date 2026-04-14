@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <link rel="canonical" href="https://tatcall.com/">
     <link rel="icon" type="image/png" href="logo.png">
@@ -7,148 +8,158 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TatCall - Call With Context</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
         .logo-container {
-        display: flex;
-        background: white;
-        border-radius: 50%;
-        width: 140px;
-        height: 140px;
-        align-items: center;
-        justify-content: center;
-         margin: 0 auto 30px auto;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.25);
-    }
+            display: flex;
+            background: white;
+            border-radius: 50%;
+            width: 140px;
+            height: 140px;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 30px auto;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+        }
 
-    .logo {
-        max-width: 80%;
-    max-height: 80%;
-    object-fit: contain;
-    }
+        .logo {
+            max-width: 80%;
+            max-height: 80%;
+            object-fit: contain;
+        }
 
-         body {
+        body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
             color: #2C3E50;
             line-height: 1.6;
             background: #f5f7fa;
         }
-        
+
         /* Hero Section */
         /* HERO UPGRADE */
-.hero {
-    position: relative;
-    height: 100vh;
-    background: radial-gradient(circle at top, #34495E, #1a252f);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    overflow: hidden;
-    color: white;
-}
+        .hero {
+            position: relative;
+            height: 100vh;
+            background: radial-gradient(circle at top, #34495E, #1a252f);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+            color: white;
+        }
 
-.hero-content {
-    z-index: 2;
-    max-width: 700px;
-    padding: 20px;
-}
+        .hero-content {
+            z-index: 2;
+            max-width: 700px;
+            padding: 20px;
+        }
 
-.-container {
-    width: 110px;
-    height: 110px;
-    margin: 0 auto 20px;
-    background: white;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+        .-container {
+            width: 110px;
+            height: 110px;
+            margin: 0 auto 20px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-. {
-    width: 80px;
-}
+        . {
+            width: 80px;
+        }
 
-.hero h1 {
-    font-size: 52px;
-    font-weight: 800;
-    margin-bottom: 15px;
-    letter-spacing: -1px;
-}
+        .hero h1 {
+            font-size: 52px;
+            font-weight: 800;
+            margin-bottom: 15px;
+            letter-spacing: -1px;
+        }
 
-.tagline {
-    font-size: 20px;
-    opacity: 0.9;
-    margin-bottom: 10px;
-}
+        .tagline {
+            font-size: 20px;
+            opacity: 0.9;
+            margin-bottom: 10px;
+        }
 
-.subtext {
-    font-size: 16px;
-    opacity: 0.7;
-    margin-bottom: 30px;
-}
+        .subtext {
+            font-size: 16px;
+            opacity: 0.7;
+            margin-bottom: 30px;
+        }
 
-/* CTA */
-.cta-group {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-}
+        /* CTA */
+        .cta-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
 
-.btn-primary {
-    background: linear-gradient(135deg, #00C9A7, #00A8CC);
-    padding: 16px 36px;
-    border-radius: 40px;
-    color: white;
-    font-weight: bold;
-    text-decoration: none;
-    box-shadow: 0 10px 30px rgba(0, 200, 167, 0.4);
-    transition: all 0.3s ease;
-}
+        .btn-primary {
+            background: linear-gradient(135deg, #00C9A7, #00A8CC);
+            padding: 16px 36px;
+            border-radius: 40px;
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+            box-shadow: 0 10px 30px rgba(0, 200, 167, 0.4);
+            transition: all 0.3s ease;
+        }
 
-.btn-primary:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 20px 50px rgba(0, 200, 167, 0.6);
-}
+        .btn-primary:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 50px rgba(0, 200, 167, 0.6);
+        }
 
-.cta-note {
-    font-size: 13px;
-    opacity: 0.7;
-}
+        .cta-note {
+            font-size: 13px;
+            opacity: 0.7;
+        }
 
-/* Background glow */
-.hero-bg {
-    position: absolute;
-    width: 600px;
-    height: 600px;
-    background: radial-gradient(circle, rgba(0,200,167,0.3), transparent 70%);
-    top: -100px;
-    right: -100px;
-    filter: blur(80px);
-}
+        /* Background glow */
+        .hero-bg {
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(0, 200, 167, 0.3), transparent 70%);
+            top: -100px;
+            right: -100px;
+            filter: blur(80px);
+        }
 
-        .hero p { animation-delay: 0.3s; }
-        .-container { animation-delay: 0.6s; }
+        .hero p {
+            animation-delay: 0.3s;
+        }
+
+        .-container {
+            animation-delay: 0.6s;
+        }
 
         @keyframes fadeUp {
             from {
                 transform: translateY(20px);
                 opacity: 0;
             }
+
             to {
                 transform: translateY(0);
                 opacity: 1;
             }
         }
-        
+
         .download-buttons {
             display: flex;
             gap: 20px;
             justify-content: center;
             flex-wrap: wrap;
         }
-        
+
         .btn {
             display: inline-flex;
             align-items: center;
@@ -158,69 +169,71 @@
             font-weight: 600;
             transition: transform 0.2s;
         }
-        
-        .btn:hover { transform: translateY(-2px); }
-        
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
         .btn-playstore {
             background: linear-gradient(135deg, #0F9B8E, #0d7a6f);
             color: white;
-            box-shadow: 0 10px 25px rgba(15,155,142,0.4);
+            box-shadow: 0 10px 25px rgba(15, 155, 142, 0.4);
         }
 
         .btn-playstore:hover {
             transform: translateY(-3px);
-            box-shadow: 0 15px 35px rgba(15,155,142,0.6);
+            box-shadow: 0 15px 35px rgba(15, 155, 142, 0.6);
         }
-        
+
         .btn-appstore {
             background: #666;
             color: white;
             opacity: 0.5;
             cursor: not-allowed;
         }
-        
+
         /* Features */
         .features {
             padding: 80px 20px;
             max-width: 1200px;
             margin: 0 auto;
         }
-        
+
         .features h2 {
             text-align: center;
             font-size: 36px;
             margin-bottom: 60px;
         }
-        
+
         .feature-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 40px;
         }
-        
+
         .feature {
-    background: white;
-    padding: 30px;
-    border-radius: 20px;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
-    transition: all 0.3s ease;
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
 
-.feature:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 25px 60px rgba(0,0,0,0.15);
-}
-        
+        .feature:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+        }
+
         .feature-icon {
             font-size: 48px;
             margin-bottom: 15px;
         }
-        
+
         .feature h3 {
             font-size: 24px;
             margin-bottom: 15px;
@@ -228,7 +241,7 @@
 
         .feature:hover {
             transform: translateY(-8px);
-            box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
         }
 
         /* How It Works */
@@ -236,25 +249,25 @@
             background: #F8F9FF;
             padding: 80px 20px;
         }
-        
+
         .how-it-works h2 {
             text-align: center;
             font-size: 36px;
             margin-bottom: 60px;
         }
-        
+
         .steps {
             max-width: 800px;
             margin: 0 auto;
         }
-        
+
         .step {
             display: flex;
             gap: 30px;
             margin-bottom: 40px;
             align-items: start;
         }
-        
+
         .step-number {
             background: #0F9B8E;
             color: white;
@@ -277,7 +290,7 @@
         .demo-phone:hover {
             transform: scale(1.03);
         }
-        
+
         /* Footer */
         footer {
             background: #2C3E50;
@@ -285,22 +298,30 @@
             padding: 40px 20px;
             text-align: center;
         }
-        
+
         .social-links {
             margin-top: 20px;
         }
-        
+
         .social-links a {
             color: white;
             margin: 0 15px;
             font-size: 24px;
             text-decoration: none;
         }
-        
+
         @media (max-width: 768px) {
-            .hero h1 { font-size: 32px; }
-            .hero p { font-size: 18px; }
-            .step { flex-direction: column; }
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero p {
+                font-size: 18px;
+            }
+
+            .step {
+                flex-direction: column;
+            }
         }
 
         .section-divider {
@@ -309,134 +330,143 @@
         }
 
         html {
-    scroll-behavior: smooth;
+            scroll-behavior: smooth;
 
             .brand-title {
-    font-size: 48px;
-    font-weight: 700;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-}
+                font-size: 48px;
+                font-weight: 700;
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+        }
 
-.hero-subtext {
-    font-size: 24px;
-    opacity: 0.85;
-    letter-spacing: 0.5px;
-    color: #FFFFFF;
-}
+        .hero-subtext {
+            font-size: 24px;
+            opacity: 0.85;
+            letter-spacing: 0.5px;
+            color: #FFFFFF;
+        }
 
-.hero-subtext span {
-    display: block;
-    font-size: 22px;
-    font-weight: 600;
-    margin-top: 8px;
-    color: #FFFFFF;
-}        
+        .hero-subtext span {
+            display: block;
+            font-size: 22px;
+            font-weight: 600;
+            margin-top: 8px;
+            color: #FFFFFF;
+        }
 
-    #downloadSection {
-    scroll-margin-top: 50px;
-}
+        #downloadSection {
+            scroll-margin-top: 50px;
+        }
 
-    .story-section {
-    padding: 80px 20px;
-    background: #f5f7fa;
-    text-align: center;
-}
+        .story-section {
+            padding: 80px 20px;
+            background: #f5f7fa;
+            text-align: center;
+        }
 
-.story-content {
-    max-width: 800px;
-    margin: 0 auto;
-}
+        .story-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
 
-.story-image {
-    width: 280px;
-    max-width: 90%;
-    margin-bottom: 30px;
-    transform: rotate(-8deg);
-    filter: drop-shadow(0 20px 40px rgba(0,0,0,0.2));
-}
+        .story-image {
+            width: 280px;
+            max-width: 90%;
+            margin-bottom: 30px;
+            transform: rotate(-8deg);
+            filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.2));
+        }
 
-.story-section h2 {
-    font-size: 28px;
-    margin-bottom: 10px;
-}
+        .story-section h2 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
 
-.story-subtext {
-    font-size: 18px;
-    color: #666;
-}   
+        .story-subtext {
+            font-size: 18px;
+            color: #666;
+        }
 
-    .story-image:hover {
-    transform: rotate(0deg) scale(1.05);
-    transition: all 0.4s ease;
-}
+        .story-image:hover {
+            transform: rotate(0deg) scale(1.05);
+            transition: all 0.4s ease;
+        }
     </style>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SX3CW672KB"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-SX3CW672KB');
+    </script>
 </head>
-    
+
 <body>
     <!-- Hero Section -->
     <section class="hero">
-    <div class="hero-content">
+        <div class="hero-content">
 
-        <h1 class="brand-title">"TatCall"</h1>
+            <h1 class="brand-title">"TatCall"</h1>
 
-        <div class="-container">
-            <img src="logo.png" class="logo">
+            <div class="-container">
+                <img src="logo.png" class="logo">
+            </div>
+
+            <h1>
+                Calls that explain themselves
+            </h1>
+            <br>
+            <p class="tagline">
+                Let them know <strong>WHY</strong> you're calling before they answer
+            </p>
+            <br>
+            <div class="cta-group">
+                <a href="#downloadSection" class="btn btn-playstore">
+                    📱 Try TatCall (Android)
+                </a>
+                <span class="cta-note">Currently in testing • Coming soon</span>
+            </div>
+
         </div>
 
-        <h1>
-            Calls that explain themselves
-        </h1>
-        <br>
-        <p class="tagline">
-            Let them know <strong>WHY</strong> you're calling before they answer
-        </p>
-        <br>
-        <div class="cta-group">
-            <a href="#downloadSection" class="btn btn-playstore">
-                📱 Try TatCall (Android)
-            </a>
-            <span class="cta-note">Currently in testing • Coming soon</span>
+        <!-- Floating gradient background -->
+        <div class="hero-bg"></div>
+    </section>
+
+    <section class="story-section">
+        <div class="story-content">
+            <img src="phone-image.png" alt="Incoming Call" class="story-image">
+            <h2>
+                How much does an incoming call tell you?
+            </h2>
+            <p class="story-subtext">
+                Not more than who is calling.
+            </p>
         </div>
+    </section>
 
-    </div>
-
-    <!-- Floating gradient background -->
-    <div class="hero-bg"></div>
-</section>
-
-<section class="story-section">  
-    <div class="story-content">
-        <img src="phone-image.png" alt="Incoming Call" class="story-image">
-        <h2>
-            How much does an incoming call tell you?
-        </h2>
-        <p class="story-subtext">
-            Not more than who is calling.
-        </p>
-    </div>
-</section>
-    
     <div class="section-divider"></div>
-    
+
     <!-- Features -->
     <section class="features">
         <h2>Why TatCall?</h2>
-        
+
         <div class="feature-grid">
             <div class="feature">
                 <div class="feature-icon">💬</div>
                 <h3>Call With Context</h3>
                 <p>Tell them why you're calling before they pick up. No more mystery calls!</p>
             </div>
-            
+
             <div class="feature">
                 <div class="feature-icon">⏰</div>
                 <h3>Respect Their Time</h3>
                 <p>Mark calls as urgent or casual, they can decide if it's a good time to talk.</p>
             </div>
-            
+
             <div class="feature">
                 <div class="feature-icon">🚨</div>
                 <h3>Emergency Contacts</h3>
@@ -446,318 +476,324 @@
     </section>
 
 
-<section style="background: linear-gradient(135deg, #2C3E50 0%, #34495E 100%); text-align:center; padding:60px 20px;">
-    <p class="hero-subtext">
-    "No more ignored calls. No more confusion."<br>
-    <span>Just clear communication.</span>
-</p>
-</section>
+    <section
+        style="background: linear-gradient(135deg, #2C3E50 0%, #34495E 100%); text-align:center; padding:60px 20px;">
+        <p class="hero-subtext">
+            "No more ignored calls. No more confusion."<br>
+            <span>Just clear communication.</span>
+        </p>
+    </section>
 
 
     <!-- Interactive Demo -->
-<section class="how-it-works">
-    <h2>Try It Yourself</h2>
-    <p style="text-align: center; margin-bottom: 40px; color: #666;">
-        👇 <strong>Try the demo below!</strong> <br> Select a feeling, add context, and see exactly what your friend will see when you call them.
-    </p>
-    
-    <div class="demo-container">
-        <!-- Demo Phone -->
-        <div class="demo-phone" id="demoPhoneText">
-            <!-- Step 1: Setup Screen -->
-            <div class="demo-screen active" id="setupScreen">
-                <div class="demo-header">Setup Call</div>
-                
-                <div style="padding: 20px;">
-                    <p style="margin-bottom: 15px; color: #666; font-size: 14px;">
-                        Calling: <strong>Your Friend</strong>
-                    </p>
-                    
-                    <div style="margin-bottom: 20px;">
-                        <p style="font-size: 12px; color: #0F9B8E; margin-bottom: 10px; font-weight: bold;">
-                            HOW YOU'RE FEELING
+    <section class="how-it-works">
+        <h2>Try It Yourself</h2>
+        <p style="text-align: center; margin-bottom: 40px; color: #666;">
+            👇 <strong>Try the demo below!</strong> <br> Select a feeling, add context, and see exactly what your friend
+            will see when you call them.
+        </p>
+
+        <div class="demo-container">
+            <!-- Demo Phone -->
+            <div class="demo-phone" id="demoPhoneText">
+                <!-- Step 1: Setup Screen -->
+                <div class="demo-screen active" id="setupScreen">
+                    <div class="demo-header">Setup Call</div>
+
+                    <div style="padding: 20px;">
+                        <p style="margin-bottom: 15px; color: #666; font-size: 14px;">
+                            Calling: <strong>Your Friend</strong>
                         </p>
-                        
-                        <div class="feeling-buttons">
-                            <button class="feeling-btn active" data-feeling="normal">
-                                🟢 Normal
-                            </button>
-                            <button class="feeling-btn" data-feeling="urgent">
-                                🔴 Urgent
-                            </button>
-                            <button class="feeling-btn" data-feeling="long">
-                                🔵 Long Talk
-                            </button>
+
+                        <div style="margin-bottom: 20px;">
+                            <p style="font-size: 12px; color: #0F9B8E; margin-bottom: 10px; font-weight: bold;">
+                                HOW YOU'RE FEELING
+                            </p>
+
+                            <div class="feeling-buttons">
+                                <button class="feeling-btn active" data-feeling="normal">
+                                    🟢 Normal
+                                </button>
+                                <button class="feeling-btn" data-feeling="urgent">
+                                    🔴 Urgent
+                                </button>
+                                <button class="feeling-btn" data-feeling="long">
+                                    🔵 Long Talk
+                                </button>
+                            </div>
                         </div>
+
+                        <div style="margin-bottom: 20px;">
+                            <p style="font-size: 12px; color: #888; margin-bottom: 10px; font-weight: bold;">
+                                CONTEXT (OPTIONAL)
+                            </p>
+                            <input type="text" id="demoContext" placeholder="e.g., Quick question about project"
+                                style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px; font-size: 14px;">
+                        </div>
+
+                        <button class="demo-call-btn" id="placeCallBtn">
+                            📞 Place Call
+                        </button>
                     </div>
-                    
-                    <div style="margin-bottom: 20px;">
-                        <p style="font-size: 12px; color: #888; margin-bottom: 10px; font-weight: bold;">
-                            CONTEXT (OPTIONAL)
+                </div>
+
+                <!-- Step 2: Incoming Screen -->
+                <div class="demo-screen" id="incomingScreen">
+                    <div class="demo-header" style="background: #2C3E50; color: white;">
+                        Incoming Call
+                    </div>
+
+                    <div style="padding: 30px; text-align: center;">
+                        <div
+                            style="width: 80px; height: 80px; background: #34495E; border-radius: 50%; margin: 20px auto; display: flex; align-items: center; justify-content: center; font-size: 40px;">
+                            👤
+                        </div>
+
+                        <h3 style="margin-bottom: 5px;">You</h3>
+                        <p id="demoPhone" style="color: #888; font-size: 14px; margin-bottom: 15px;">
+                            +91 98765 43210
                         </p>
-                        <input type="text" id="demoContext" 
-                            placeholder="e.g., Quick question about project"
-                            style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px; font-size: 14px;">
+
+                        <div id="demoFeeling"
+                            style="display: inline-block; padding: 6px 16px; border-radius: 20px; background: #4CAF50; color: white; font-size: 14px; margin-bottom: 20px;">
+                            🟢 Normal
+                        </div>
+
+                        <div id="demoContextBox"
+                            style="background: #34495E; color: white; padding: 15px; border-radius: 12px; margin: 20px 0; text-align: left; display: none;">
+                            <p id="demoContextText" style="font-size: 14px; line-height: 1.6;">
+                                • Quick question about project
+                            </p>
+                        </div>
+
+                        <p style="color: #0F9B8E; font-size: 14px; font-weight: bold; margin-top: 30px;">
+                            ✨ This is what your friend sees!
+                        </p>
+
+                        <button class="demo-reset-btn" id="resetBtn">
+                            Try Again
+                        </button>
                     </div>
-                    
-                    <button class="demo-call-btn" id="placeCallBtn">
-                        📞 Place Call
-                    </button>
                 </div>
             </div>
-            
-            <!-- Step 2: Incoming Screen -->
-            <div class="demo-screen" id="incomingScreen">
-                <div class="demo-header" style="background: #2C3E50; color: white;">
-                    Incoming Call
-                </div>
-                
-                <div style="padding: 30px; text-align: center;">
-                    <div style="width: 80px; height: 80px; background: #34495E; border-radius: 50%; margin: 20px auto; display: flex; align-items: center; justify-content: center; font-size: 40px;">
-                        👤
-                    </div>
-                    
-                    <h3 style="margin-bottom: 5px;">You</h3>
-                    <p id="demoPhone" style="color: #888; font-size: 14px; margin-bottom: 15px;">
-                        +91 98765 43210
-                    </p>
-                    
-                    <div id="demoFeeling" style="display: inline-block; padding: 6px 16px; border-radius: 20px; background: #4CAF50; color: white; font-size: 14px; margin-bottom: 20px;">
-                        🟢 Normal
-                    </div>
-                    
-                    <div id="demoContextBox" style="background: #34495E; color: white; padding: 15px; border-radius: 12px; margin: 20px 0; text-align: left; display: none;">
-                        <p id="demoContextText" style="font-size: 14px; line-height: 1.6;">
-                            • Quick question about project
-                        </p>
-                    </div>
-                    
-                    <p style="color: #0F9B8E; font-size: 14px; font-weight: bold; margin-top: 30px;">
-                        ✨ This is what your friend sees!
-                    </p>
-                    
-                    <button class="demo-reset-btn" id="resetBtn">
-                        Try Again
-                    </button>
-                </div>
+
+            <div style="text-align: center; margin-top: 30px; max-width: 500px; margin-left: auto; margin-right: auto;">
+                <p style="color: #666; font-size: 15px; line-height: 1.8;">
+                    This is how TatCall works <br> <strong>Built with respect for your time!</strong>
+                </p>
+                <br>
+                <p style="font-size:16px; opacity:0.8; margin-top:-20px;">
+                    Because every call has a reason — let them know it.
+                </p>
             </div>
         </div>
-        
-        <div style="text-align: center; margin-top: 30px; max-width: 500px; margin-left: auto; margin-right: auto;">
-            <p style="color: #666; font-size: 15px; line-height: 1.8;">
-                This is how TatCall works <br> <strong>Built with respect for your time!</strong>
+    </section>
+
+    <style>
+        .demo-container {
+            max-width: 320px;
+            margin: 0 auto;
+        }
+
+        .demo-phone {
+            background: white;
+            border: 8px solid #2C3E50;
+            border-radius: 35px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            position: relative;
+        }
+
+        /* Add phone notch at top */
+        .demo-phone::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 25px;
+            background: #2C3E50;
+            border-radius: 0 0 15px 15px;
+            z-index: 10;
+        }
+
+        .demo-screen {
+            display: none;
+            min-height: 600px;
+            padding-top: 30px;
+            /* Space for notch */
+        }
+
+        .demo-screen.active {
+            display: block;
+        }
+
+        .demo-header {
+            background: #2C3E50;
+            color: white;
+            padding: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .feeling-buttons {
+            display: flex;
+            gap: 8px;
+        }
+
+        .feeling-btn {
+            flex: 1;
+            padding: 12px 8px;
+            border: 2px solid #ddd;
+            background: white;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 12px;
+            transition: all 0.3s;
+        }
+
+        .feeling-btn:hover {
+            border-color: #0F9B8E;
+        }
+
+        .feeling-btn.active {
+            background: #0F9B8E;
+            color: white;
+            border-color: #0F9B8E;
+        }
+
+        .demo-call-btn {
+            width: 100%;
+            padding: 15px;
+            background: #0F9B8E;
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .demo-call-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .demo-reset-btn {
+            margin-top: 20px;
+            padding: 12px 30px;
+            background: white;
+            color: #0F9B8E;
+            border: 2px solid #0F9B8E;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .demo-reset-btn:hover {
+            background: #0F9B8E;
+            color: white;
+        }
+    </style>
+
+    <script>
+        // Feeling button selection
+        const feelingBtns = document.querySelectorAll('.feeling-btn');
+        let selectedFeeling = 'normal';
+
+        feelingBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                feelingBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                selectedFeeling = btn.dataset.feeling;
+            });
+        });
+
+        // Place call
+        document.getElementById('placeCallBtn').addEventListener('click', () => {
+            const context = document.getElementById('demoContext').value.trim();
+
+            // Update incoming screen
+            const feelingDisplay = document.getElementById('demoFeeling');
+            const contextBox = document.getElementById('demoContextBox');
+            const contextText = document.getElementById('demoContextText');
+
+            // Set feeling
+            if (selectedFeeling === 'urgent') {
+                feelingDisplay.style.background = '#E17055';
+                feelingDisplay.textContent = '🔴 Urgent';
+            } else if (selectedFeeling === 'long') {
+                feelingDisplay.style.background = '#6C5CE7';
+                feelingDisplay.textContent = '🔵 Long Talk';
+            } else {
+                feelingDisplay.style.background = '#4CAF50';
+                feelingDisplay.textContent = '🟢 Normal';
+            }
+
+            // Set context
+            if (context) {
+                contextBox.style.display = 'block';
+                contextText.textContent = '• ' + context;
+            } else {
+                contextBox.style.display = 'none';
+            }
+
+            // Switch screens
+            document.getElementById('setupScreen').classList.remove('active');
+            document.getElementById('incomingScreen').classList.add('active');
+        });
+
+        // Reset demo
+        document.getElementById('resetBtn').addEventListener('click', () => {
+            document.getElementById('demoContext').value = '';
+            selectedFeeling = 'normal';
+            feelingBtns.forEach(b => b.classList.remove('active'));
+            feelingBtns[0].classList.add('active');
+
+            document.getElementById('incomingScreen').classList.remove('active');
+            document.getElementById('setupScreen').classList.add('active');
+        });
+    </script>
+
+    <!-- NEW: Download Section -->
+    <section id="downloadSection"
+        style="background: linear-gradient(135deg, #2C3E50 0%, #34495E 100%); padding: 60px 20px; text-align: center;">
+        <h2 style="color: white; font-size: 32px; margin-bottom: 15px;">
+            Ready to Try TatCall?
+        </h2>
+        <p style="color: rgba(255,255,255,0.9); font-size: 16px; margin-bottom: 40px;">
+            Download now and start calling with context!
+        </p>
+
+        <div class="download-buttons" id="downloadButtons">
+            <a href="javascript:void(0)" class="btn btn-playstore" id="playstoreBtn">
+                📱 Download on Google Play
+            </a>
+            <a class="btn btn-appstore">
+                🍎 App Store (Coming Soon)
+            </a>
+        </div>
+
+        <!-- Desktop message (hidden by default) -->
+        <div id="desktopMessage"
+            style="display: none; margin-top: 30px; padding: 20px; background: rgba(255,255,255,0.1); border-radius: 12px; max-width: 500px; margin-left: auto; margin-right: auto;">
+            <p style="color: white; font-size: 16px;">
+                💻 You're on a computer! Scan this QR code with your phone:
             </p>
-            <br>
-            <p style="font-size:16px; opacity:0.8; margin-top:-20px;">
-                Because every call has a reason — let them know it.
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://play.google.com/store/apps/details?id=YOUR_APP_ID"
+                alt="QR Code" style="margin-top: 15px; border-radius: 8px;">
+            <p style="color: rgba(255,255,255,0.7); font-size: 14px; margin-top: 10px;">
+                Or open tatcall.com on your phone
             </p>
         </div>
-    </div>
-</section>
+    </section>
 
-<style>
-.demo-container {
-    max-width: 320px;
-    margin: 0 auto;
-}
-
-.demo-phone {
-    background: white;
-    border: 8px solid #2C3E50;
-    border-radius: 35px;
-    overflow: hidden;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-    position: relative;
-}
-
-/* Add phone notch at top */
-.demo-phone::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100px;
-    height: 25px;
-    background: #2C3E50;
-    border-radius: 0 0 15px 15px;
-    z-index: 10;
-}
-
-.demo-screen {
-    display: none;
-    min-height: 600px;
-    padding-top: 30px;  /* Space for notch */
-}
-
-.demo-screen.active {
-    display: block;
-}
-
-.demo-header {
-    background: #2C3E50;
-    color: white;
-    padding: 20px;
-    font-size: 18px;
-    font-weight: bold;
-    text-align: center;
-}
-
-.feeling-buttons {
-    display: flex;
-    gap: 8px;
-}
-
-.feeling-btn {
-    flex: 1;
-    padding: 12px 8px;
-    border: 2px solid #ddd;
-    background: white;
-    border-radius: 10px;
-    cursor: pointer;
-    font-size: 12px;
-    transition: all 0.3s;
-}
-
-.feeling-btn:hover {
-    border-color: #0F9B8E;
-}
-
-.feeling-btn.active {
-    background: #0F9B8E;
-    color: white;
-    border-color: #0F9B8E;
-}
-
-.demo-call-btn {
-    width: 100%;
-    padding: 15px;
-    background: #0F9B8E;
-    color: white;
-    border: none;
-    border-radius: 12px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: transform 0.2s;
-}
-
-.demo-call-btn:hover {
-    transform: translateY(-2px);
-}
-
-.demo-reset-btn {
-    margin-top: 20px;
-    padding: 12px 30px;
-    background: white;
-    color: #0F9B8E;
-    border: 2px solid #0F9B8E;
-    border-radius: 10px;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-.demo-reset-btn:hover {
-    background: #0F9B8E;
-    color: white;
-}
-</style>
-
-<script>
-// Feeling button selection
-const feelingBtns = document.querySelectorAll('.feeling-btn');
-let selectedFeeling = 'normal';
-
-feelingBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-        feelingBtns.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        selectedFeeling = btn.dataset.feeling;
-    });
-});
-
-// Place call
-document.getElementById('placeCallBtn').addEventListener('click', () => {
-    const context = document.getElementById('demoContext').value.trim();
-    
-    // Update incoming screen
-    const feelingDisplay = document.getElementById('demoFeeling');
-    const contextBox = document.getElementById('demoContextBox');
-    const contextText = document.getElementById('demoContextText');
-    
-    // Set feeling
-    if (selectedFeeling === 'urgent') {
-        feelingDisplay.style.background = '#E17055';
-        feelingDisplay.textContent = '🔴 Urgent';
-    } else if (selectedFeeling === 'long') {
-        feelingDisplay.style.background = '#6C5CE7';
-        feelingDisplay.textContent = '🔵 Long Talk';
-    } else {
-        feelingDisplay.style.background = '#4CAF50';
-        feelingDisplay.textContent = '🟢 Normal';
-    }
-    
-    // Set context
-    if (context) {
-        contextBox.style.display = 'block';
-        contextText.textContent = '• ' + context;
-    } else {
-        contextBox.style.display = 'none';
-    }
-    
-    // Switch screens
-    document.getElementById('setupScreen').classList.remove('active');
-    document.getElementById('incomingScreen').classList.add('active');
-});
-
-// Reset demo
-document.getElementById('resetBtn').addEventListener('click', () => {
-    document.getElementById('demoContext').value = '';
-    selectedFeeling = 'normal';
-    feelingBtns.forEach(b => b.classList.remove('active'));
-    feelingBtns[0].classList.add('active');
-    
-    document.getElementById('incomingScreen').classList.remove('active');
-    document.getElementById('setupScreen').classList.add('active');
-});
-</script>
-
-<!-- NEW: Download Section -->
-<section id="downloadSection" style="background: linear-gradient(135deg, #2C3E50 0%, #34495E 100%); padding: 60px 20px; text-align: center;">
-    <h2 style="color: white; font-size: 32px; margin-bottom: 15px;">
-        Ready to Try TatCall?
-    </h2>
-    <p style="color: rgba(255,255,255,0.9); font-size: 16px; margin-bottom: 40px;">
-        Download now and start calling with context!
-    </p>
-    
-    <div class="download-buttons" id="downloadButtons">
-        <a href="javascript:void(0)" class="btn btn-playstore" id="playstoreBtn">
-            📱 Download on Google Play
-        </a>
-        <a class="btn btn-appstore">
-            🍎 App Store (Coming Soon)
-        </a>
-    </div>
-    
-    <!-- Desktop message (hidden by default) -->
-    <div id="desktopMessage" style="display: none; margin-top: 30px; padding: 20px; background: rgba(255,255,255,0.1); border-radius: 12px; max-width: 500px; margin-left: auto; margin-right: auto;">
-        <p style="color: white; font-size: 16px;">
-            💻 You're on a computer! Scan this QR code with your phone: 
-        </p>
-    <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://play.google.com/store/apps/details?id=YOUR_APP_ID" 
-         alt="QR Code" 
-         style="margin-top: 15px; border-radius: 8px;">
-    <p style="color: rgba(255,255,255,0.7); font-size: 14px; margin-top: 10px;">
-        Or open tatcall.com on your phone
-        </p>
-    </div>
-</section>
-
-<!-- Privacy Policy Section -->
-<section style="padding: 60px 20px; background: white;">
-    <div style="max-width: 800px; margin: 0 auto; text-align: center;">
-        <a href="privacy.html" style="
+    <!-- Privacy Policy Section -->
+    <section style="padding: 60px 20px; background: white;">
+        <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+            <a href="privacy.html" style="
             display: inline-block;
             text-decoration: none;
             background: linear-gradient(135deg, #0F9B8E 0%, #0d7a6f 100%);
@@ -771,54 +807,54 @@ document.getElementById('resetBtn').addEventListener('click', () => {
             transition: all 0.3s ease;
             font-weight: 600;
         ">
-            📄 Privacy Policy
-        </a>
-    </div>
-</section>
-    
+                📄 Privacy Policy
+            </a>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer>
         <p>&copy; 2026 TatCall. All rights reserved.</p>
         <p>Contact: <a href="mailto:tatcall.info@gmail.com" style="color: #0F9B8E;">tatcall.info@gmail.com</a></p>
 
         <br>
-        
+
         <div class="social-links">
-            <a href="https://www.instagram.com/tatcall.app?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">📷 Instagram</a>
+            <a href="https://www.instagram.com/tatcall.app?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                target="_blank">📷 Instagram</a>
         </div>
         <p style="color: rgba(255,255,255,0.9); font-size: 15px; margin-bottom: 40px;">
-        -- Please follow for latest updates --
-    </p>
+            -- Please follow for latest updates --
+        </p>
     </footer>
 
-   <script>
-document.addEventListener("DOMContentLoaded", function () {
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
 
-    function isMobile() {
-        return /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
-    }
+            function isMobile() {
+                return /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+            }
 
-    const playBtn = document.getElementById('playstoreBtn');
+            const playBtn = document.getElementById('playstoreBtn');
 
-    playBtn.addEventListener('click', function(e) {
-        e.preventDefault();
+            playBtn.addEventListener('click', function (e) {
+                e.preventDefault();
 
-        // Hide message after 7 seconds
-        setTimeout(() => {
-            document.getElementById('desktopMessage').style.display = 'none';
-        }, 7000);
+                // Hide message after 7 seconds
+                setTimeout(() => {
+                    document.getElementById('desktopMessage').style.display = 'none';
+                }, 7000);
 
-        if (isMobile()) {
-            alert("🚀 TatCall is currently in testing phase.\nAvailable soon on Play Store!");
-        } else {
-            const msg = document.getElementById('desktopMessage');
-            msg.style.display = 'block';
-        }
-    });
+                if (isMobile()) {
+                    alert("🚀 TatCall is currently in testing phase.\nAvailable soon on Play Store!");
+                } else {
+                    const msg = document.getElementById('desktopMessage');
+                    msg.style.display = 'block';
+                }
+            });
 
-});
-</script>  
+        });
+    </script>
 </body>
+
 </html>
-
-
